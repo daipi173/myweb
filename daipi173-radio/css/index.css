@@ -1,0 +1,202 @@
+body,img,main{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: url(../img/2.jpg) no-repeat center;
+    background-size: cover;
+}
+.container{
+    width: 650px;   
+    margin: 80px auto 0;
+}
+.container .image{
+    width: 100%;
+    text-align: center;
+}
+.container .image img{
+    height: 200px;
+    width: 200px;
+    vertical-align: top;
+    border: 50px solid black;
+    border-radius: 50%;   
+}
+.container .image .img1{
+    animation: img1 linear 10s infinite;
+}
+.icon-play_icon{
+    font-size: 20px;
+}
+@keyframes img1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{ 
+        transform: rotate(360deg);
+    }
+}
+.icon-jingyinmute33{
+    height: 37px;
+    width: 37px;
+}
+.container .tool{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-top: 100px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+.container .prev{
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 36px;
+    height: 37px;
+}
+.container .tool .btn{
+    position: absolute;
+    left: 40px;
+    width: 36px;
+    height: 37px;   
+}
+.container .tool .next{
+    position: absolute;
+    left: 85px;
+    width: 36px;
+    height: 37px;   
+}
+.container .tool i{
+    color: #fff;
+    font-size: 36px;
+}
+.container .tool .prev i,
+.container .tool .next i{
+    position: absolute;
+    bottom: -1px;
+    font-size: 30px;
+}
+.container .tool>div,.container .progress{
+    top: 50%;
+    margin-top: -18.5px;
+}
+.container .tool .progress{
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 37px;
+    line-height: 37px;
+}
+.container .tool .progress .startTime,
+.container .tool .progress .endTime{
+    color: #fff;
+    font-weight: 200;
+    font-family: Arial;
+}
+.container .tool .progress .startTime{
+    float: left;
+}
+.container .tool .progress .endTime{
+    float: right;
+}
+.container .tool .progress .proBox{
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    display: inline-block;
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    left: 50%;
+    margin-left: -120px;
+    cursor: pointer;
+}
+.container .tool .progress .proBox .proBg{
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.container .tool .progress .proBox .proActive{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 2px;
+    background: #fff;
+}
+.container .tool .progress .proBox .point-box{
+    position: absolute;
+    right: -6px;
+    margin-top: -9px;
+    width: 20px;
+    height: 20px;
+    /* background: red; */
+    cursor: pointer;
+}
+.container .tool .progress .proBox .point-box .point{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -4px;
+    margin-left: -4px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+.container .voice{
+    position: absolute;
+    right: 50px;
+    width: 36px;
+    height: 37px; 
+    cursor: pointer; 
+}
+.container .voice-box{
+    position: absolute;
+    right: 14px;
+    top: -152px;
+    width: 10px;
+    height: 150px;
+    background: rgba(115,114,112,0.5);
+    display: none;
+    border-radius: 5px;
+}
+.container .voice-box .voice-bg{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+}
+.container .voice-box .voice-active{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(213,223,219,0.8);
+    height: 150px;
+}
+.container .voice-box .voice-active .vpoint{
+    position: absolute;
+    left: -10px;
+    display: inline-block;
+    height: 12px;
+    width: 30px;
+    cursor: pointer;
+}
+.container .voice-box .voice-active .vpoint .voice-point{
+    position: absolute;
+    left: 5px;
+    display: inline-block;
+    height: 8px;
+    width: 20px;
+    background: #fff;
+    border-radius: 3px;
+}

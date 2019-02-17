@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>个性化播放器</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="img/iconfont1/iconfont.css">
+    <link rel="stylesheet" href="img/iconfont3/iconfont.css">
+</head>
+<body>
+    <div class="container">
+        <main class="image">
+            <img src="img/1.jpg" alt="" id="img1">                        
+            <audio src="source/1.mp3" id="audio"></audio>
+        </main>
+        <div class="tool">  
+            <div class="prev">
+                <i class="iconfont icon-shangyishou"></i>
+            </div>
+           <div class="btn">
+                <i class="iconfont icon-play_icon"></i>
+           </div>
+           <div class="next">
+                <i class="iconfont icon-xiayishou"></i>
+            </div>
+           <div class="progress">
+               <div class="startTime"></div>
+               <div class="proBox">
+                   <div class="proBg"></div>
+                   <div class="proActive">
+                       <div class="point-box">
+                            <span class="point"></span>
+                       </div>
+                   </div>
+               </div>
+               <div class="endTime"></div>
+           </div>
+           <div class="voice">
+               <i class="iconfont icon-weibiaoti1" id="voice-point"></i>
+               <div class="voice-box">
+                <div class="voice-bg"></div>
+                <div class="voice-active">
+                    <div class="vpoint">
+                        <span class="voice-point"></span>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
