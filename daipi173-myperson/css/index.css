@@ -1,0 +1,447 @@
+body,ul,li,img{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* 头部导航条 */
+.navbar-inverse{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+/* 主体部分 */
+.main{
+    position: relative;
+}
+.main .fiex-img{
+    position: fixed;
+    top: 52px;
+    background: url('../img/2.jpg') no-repeat center 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+}
+/* 主体导航条 */
+.main-nav{
+   position: absolute;
+   top: 80px;
+   height: 79px;
+   line-height: 79px;
+}
+/* 清除浮动 */
+.clearfiex::before,
+.clearfiex::after{
+    content: '';
+    display: table;
+}
+.clearfiex::after{
+    content: '';
+    clear: both;
+}
+.main-nav h1{
+    float: left;
+    color: #4ab344;
+    cursor: pointer;
+}
+.main-nav ul li{
+    float: right;
+}
+.main-nav a{
+    display: inline-block;
+    margin: 0 40px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: gray;
+    text-decoration: none;
+}
+.main-nav .home-page{
+    color: #4ab344;
+}
+/* 介绍 */
+.send{
+    display: none;
+    position: absolute;
+    z-index: 10000;
+    right: 150px;
+    top: 240px;
+    /* border: 1px solid #000; */
+    height: 260px;
+    width: 260px;
+    color: #fff;
+    border-radius: 130px;
+    background: rgb(0,0,0);
+    opacity: 0;
+}
+.send p{
+    width: 130px;
+    margin: 40px auto;
+    font-size: 16px;
+}
+/* 联系我 */
+.animation{
+    position: absolute;
+    right: 350px;
+    top: 140px;
+    height: 30px;
+    line-height: 30px;
+    width: 300px;
+    overflow: hidden;
+}
+.animation p{
+    position: absolute;
+    font-size: 14px;
+    color: #000; 
+    font-weight: bold;
+    transform: translate(310px,0);
+}
+.move{
+    animation: Move linear infinite 8s;
+}
+@keyframes Move{
+    0%{
+        transform: translate(310px,0);
+    }
+    100%{
+        transform: translate(-220px,0);
+    }
+}
+/* 展示效果 */
+.show-time{
+    position: absolute;
+    top: 220px;
+}
+.show-time img{
+    position: absolute;
+    top: -20px;
+    width: 50px;
+    height: 18px;
+}
+.show-time span{
+    font-size: 32px;
+    font-weight: bold;
+}
+.show-time .container span:nth-child(3){
+    color: #4ab344;
+}
+.show-time .container p{ 
+    font-size: 18px;
+    color: gray;
+}
+/* 灰色背景 */
+.main .gray-bg{
+    position: absolute;
+    top: 500px;
+    height: 396px;
+    width: 100%;
+    background: rgb(17,17,17);
+}
+.gray-bg .ul-box li{
+    float: left;
+    width: 33%;
+    padding: 0 5px;
+    margin-top: 90px;
+    text-align: center;
+}
+.gray-bg .ul-box img{
+    width: 90px;
+    height: 90px;
+}
+.gray-bg .ul-box p{
+    margin-bottom: 26px;
+    font-size: 20px;
+    color: rgb(158, 158, 158);
+}
+.gray-bg .ul-box span{
+    font-size: 20px;
+    color: rgb(70, 70, 70);
+}
+/* 我的展示时间 */
+.main .case-bg{
+    position: absolute;
+    top: 896px;
+    height: 100%;
+    width: 100%;
+}
+.case-bg .case-time{
+    /* border: 1px solid #fff;  */
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+}
+.case-time span{
+    font-size: 20px;
+}
+.case-time span:first-child{
+    color: #4ab344;
+}
+.case-time span:nth-child(2){
+    font-weight: bold;
+}
+.case-time .center-box{
+    padding-top: 120px;
+    margin-bottom: 64px;
+    text-align: center;
+}
+.case-time .center-box p{
+    color: #8c8c8c;
+    font-size: 20px;
+}
+.case-time .case-ul li{
+    float: left;
+    width: 25%;
+    font-size: 16px;
+    text-align: center;
+    color: #8c8c8c;
+    cursor: pointer;
+}
+.case-time .case-ul .active{
+    color: #4ab344;
+}
+.case-time .list-ul{
+    display: flex;
+    justify-content: center;
+}
+.case-time .remove-show{
+    display: none;
+}
+.case-time .list1 li{
+    width: 33%;
+}
+.case-time .list-ul li{
+    height: 280px;
+    margin: 80px 2px;
+    font-size: 16px;
+    color: #8c8c8c;
+    text-align: center;
+}
+.case-time .list-ul img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.case-time .list2 li{
+    width: 20%;
+}
+.case-time .case-btn{
+    display: inline-block;
+    border: 1px solid #fff;
+    height: 58px;
+    line-height: 58px;
+    width: 358px;
+    margin-bottom: 155px;
+    color: #4ab344;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+/* 故事 */
+.story .rect{
+    height: 83px;
+    width: 540px;
+    background: #000;
+    margin-bottom: 84px;
+}
+.story .story-box img{
+    width: 77%;
+}
+.story-content{
+    width: 540px;
+    padding: 36px 24px 62px;
+    background: rgb(33,33,33);
+}
+.story-content span{
+    font-size: 26px;
+}
+.story-content span:first-child{
+    color: #4ab344;
+}
+.story-content span:last-child{
+    color: rgb(67,67,67);
+}
+.story-content p{
+    margin-top: 36px;
+    font-size: 24px;
+    color: #828282;
+}
+.story .justfy{
+    margin-bottom: 0;
+}
+/* 学习到的内容 */
+.study-bg{
+    background: rgba(67,67,67,0.9);
+}
+.study-bg .study-title{
+    padding-top: 196px;
+    margin-bottom: 142px;
+    font-size: 26px;
+    text-align: center;
+}
+.study-bg .study-title span:first-child{
+    color: #4ab344;
+}
+.study-bg .study-title p{
+    color: #8c8c8c;
+}
+.study-bg .study-img{
+    display: flex;
+    justify-content: center;
+}
+.study-bg .study-img img{
+    width: 100%;
+    padding: 2px;
+}
+/* 优秀的网站 */
+.excellent-bg{
+    background: rgb(17,17,17);
+    padding-bottom: 100px;
+}
+.excellent-bg .excellent-title{
+    padding-top: 196px;
+    margin-bottom: 196px;
+    font-size: 26px;
+    text-align: center;
+}
+.excellent-bg .excellent-title span:first-child{
+    color: #4ab344;
+}
+.excellent-bg .excellent-title p{
+    font-size: 24px;
+    color: #828282;
+}
+.excellent-ul{
+    display: flex;
+}
+.excellent-ul li{
+    width: 47%;
+    margin-left: 3%;
+}
+.excellent-box{
+    display: flex;
+    width: 100%;
+    height: 220px;
+}
+.excellent-box .img{
+    width: 100%;
+}
+.excellent-box .img img{
+    width: 82%;
+    height: 80%;
+}
+.excellent-box .title a{
+    color: #b4b4b4;
+}
+.excellent-box .title p{
+    margin-top: 10px;
+    color: #555555;
+}
+/* 绿色背景 */
+.green-bg{
+    width: 100%;
+    padding: 80px 40px;
+    background: #41b039;
+    text-align: center;
+}
+.green-bg span{
+    font-size: 24px;
+    color: #fff;
+}
+.green-bg a{
+    display: inline-block;
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+/* 页脚 */
+.footer-bg{
+    width: 100%;
+    height: 144px;
+    line-height: 144px;
+    color: #666666;
+    font-size: 14px;
+    background: rgb(17,17,17);
+    text-align: center;
+}
+.footer-bg p{
+    margin-bottom: 0;
+}
+@media screen and (max-width: 768px){
+    .main-nav h1{
+        width: 100%;
+    }
+    .main-nav ul{
+        float: left;
+    }
+    .main-nav a{
+        margin: 0 15px;
+    }
+    .show-time{
+        top: 260px;
+    }
+    .animation{
+        right: 120px;
+    }
+    /* 灰色背景 */
+    .main .gray-bg{
+        height: 396px;
+    }
+    .gray-bg .ul-box span{
+        font-size: 14px;
+    }
+    .case-time .case-btn{
+        width: 280px;
+    }
+    /* 故事 */
+    .story .rect{
+        width: 260px;
+    }
+    .story-content{
+        width: 260px;
+    }
+    .story-content span,
+    .study-bg .study-title span,
+    .case-bg .case-time span,
+    .excellent-bg .excellent-title span{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .story-content p,
+    .study-bg .study-title p,
+    .case-bg .case-time p,
+    .excellent-bg .excellent-title p,
+    .excellent-box .title p{
+        font-size: 12px;
+    }
+    .excellent-box .img img{
+        width: 90%;
+        height: 50%;
+    }
+}
+@media screen and (min-width: 1025px){
+    .animation p{
+        color: #fff;
+    }
+    .main .fiex-img{
+        background: url('../img/1.jpg') no-repeat center 0;
+    }
+    .main-nav a,
+    .show-time .container p{
+        color: #a6a6a6;
+    }
+    .show-time span{
+        color: #fff;
+    }
+    .case-time .center-box p{
+        color: rgb(87, 87, 87);
+    }
+}
