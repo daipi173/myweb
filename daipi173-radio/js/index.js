@@ -19,11 +19,11 @@ var timer,
     allWidth=232,
     timer2;
 var Img1 = document.getElementById('img1');
-// Audio.oncanplay = function(){
-//     StartTime.innerHTML = Change(Audio.currentTime);
-//     duration = this.duration;
-//     EndTime.innerHTML = Change(duration);
-// };
+Audio.oncanplay = function(){
+    StartTime.innerHTML = Change(Audio.currentTime);
+    duration = this.duration;
+    EndTime.innerHTML = Change(duration);
+};
 
 // 线上网络资源用ondurationchange
 // Audio.ondurationchange = function(){
@@ -31,11 +31,11 @@ var Img1 = document.getElementById('img1');
 //     duration = this.duration;
 //     EndTime.innerHTML = Change(duration);
 // };
-window.onload = function(){
-    StartTime.innerHTML = Change(Audio.currentTime);
-    duration = Audio.duration;
-    EndTime.innerHTML = Change(duration);
-};
+// window.onload = function(){
+//     StartTime.innerHTML = Change(Audio.currentTime);
+//     duration = Audio.duration;
+//     EndTime.innerHTML = Change(duration);
+// };
 
 //改变时间的格式
 function Change(time){
@@ -73,6 +73,7 @@ function movePro(){
 var arr = ['source/1.mp3','source/2.mp3','source/3.mp3'];
 var num = 0;
 Prev.onclick = function(){
+    clearInterval(timer);
     if(num == 0){
         num = arr.length-1;
     }else{
