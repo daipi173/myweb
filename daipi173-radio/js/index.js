@@ -19,16 +19,16 @@ var timer,
     allWidth=232,
     timer2;
 var Img1 = document.getElementById('img1');
-Audio.onload = function(){
-        StartTime.innerHTML = Change(Audio.currentTime);
-        duration = this.duration;
-        EndTime.innerHTML = Change(duration);
-};
-// Audio.oncanplay = function(){
-//     StartTime.innerHTML = Change(Audio.currentTime);
-//     duration = this.duration;
-//     EndTime.innerHTML = Change(duration);
+// Audio.onload = function(){
+//         StartTime.innerHTML = Change(Audio.currentTime);
+//         duration = this.duration;
+//         EndTime.innerHTML = Change(duration);
 // };
+Audio.oncanplay = function(){
+    StartTime.innerHTML = Change(Audio.currentTime);
+    duration = this.duration;
+    EndTime.innerHTML = Change(duration);
+};
 // window.onload = function(){
 //     StartTime.innerHTML = Change(Audio.currentTime);
 //     duration = Audio.duration;
@@ -43,7 +43,7 @@ function Change(time){
 }
 
 function musicPlay(){
-    Audio.play();
+    Audio.play(); 
     Img1.className = 'img1';
     play.className = 'iconfont icon-bofang';
     timer = setInterval(movePro,200);
@@ -52,7 +52,6 @@ function musicPause(){
     Audio.pause();
     play.className = 'iconfont icon-play_icon';
     clearInterval(timer);
-
 }
 Btn.onmouseup = function(){
     if(Audio.paused){
