@@ -24,9 +24,16 @@ var Img1 = document.getElementById('img1');
 //     duration = this.duration;
 //     EndTime.innerHTML = Change(duration);
 // };
-Audio.ondurationchange = function(){
+
+// 线上网络资源用ondurationchange
+// Audio.ondurationchange = function(){
+//     StartTime.innerHTML = Change(Audio.currentTime);
+//     duration = this.duration;
+//     EndTime.innerHTML = Change(duration);
+// };
+window.onload = function(){
     StartTime.innerHTML = Change(Audio.currentTime);
-    duration = this.duration;
+    duration = Audio.duration;
     EndTime.innerHTML = Change(duration);
 };
 
