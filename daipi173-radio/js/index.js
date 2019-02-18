@@ -26,16 +26,16 @@ var Img1 = document.getElementById('img1');
 // };
 
 // 线上网络资源用ondurationchange
-Audio.ondurationchange = function(){
-    StartTime.innerHTML = Change(Audio.currentTime);
-    duration = this.duration;
-    EndTime.innerHTML = Change(duration);
-};
-// window.onload = function(){
+// Audio.ondurationchange = function(){
 //     StartTime.innerHTML = Change(Audio.currentTime);
-//     duration = Audio.duration;
+//     duration = this.duration;
 //     EndTime.innerHTML = Change(duration);
 // };
+window.onload = function(){
+    StartTime.innerHTML = Change(Audio.currentTime);
+    duration = Audio.duration;
+    EndTime.innerHTML = Change(duration);
+};
 
 //改变时间的格式
 function Change(time){
