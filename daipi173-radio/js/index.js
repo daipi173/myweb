@@ -19,21 +19,16 @@ var timer,
     allWidth=232,
     timer2;
 var Img1 = document.getElementById('img1');
-// Audio.onload = function(){
-//         StartTime.innerHTML = Change(Audio.currentTime);
-//         duration = this.duration;
-//         EndTime.innerHTML = Change(duration);
+// Audio.oncanplay = function(){
+//     StartTime.innerHTML = Change(Audio.currentTime);
+//     duration = this.duration;
+//     EndTime.innerHTML = Change(duration);
 // };
-Audio.oncanplay = function(){
+Audio.ondurationchange = function(){
     StartTime.innerHTML = Change(Audio.currentTime);
     duration = this.duration;
     EndTime.innerHTML = Change(duration);
 };
-// window.onload = function(){
-//     StartTime.innerHTML = Change(Audio.currentTime);
-//     duration = Audio.duration;
-//     EndTime.innerHTML = Change(duration);
-// };
 
 //改变时间的格式
 function Change(time){
