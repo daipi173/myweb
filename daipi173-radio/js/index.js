@@ -19,18 +19,18 @@ var timer,
     allWidth=232,
     timer2;
 var Img1 = document.getElementById('img1');
-Audio.oncanplay = function(){
-    StartTime.innerHTML = Change(Audio.currentTime);
-    duration = this.duration;
-    EndTime.innerHTML = Change(duration);
-};
-
-// 线上网络资源用ondurationchange
-// Audio.ondurationchange = function(){
+// Audio.oncanplay = function(){
 //     StartTime.innerHTML = Change(Audio.currentTime);
 //     duration = this.duration;
 //     EndTime.innerHTML = Change(duration);
 // };
+
+// 线上网络资源用ondurationchange
+Audio.ondurationchange = function(){
+    StartTime.innerHTML = Change(Audio.currentTime);
+    duration = this.duration;
+    EndTime.innerHTML = Change(duration);
+};
 // window.onload = function(){
 //     StartTime.innerHTML = Change(Audio.currentTime);
 //     duration = Audio.duration;
