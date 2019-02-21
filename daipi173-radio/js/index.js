@@ -17,8 +17,16 @@ voicePoint = document.getElementsByClassName('voice-point')[0];
 var timer,
     duration,
     allWidth=232,
-    timer2;
+    timer2,
+    timer3;
 var Img1 = document.getElementById('img1');
+var deg = 0;
+var flag1 = true;
+// 图片旋转
+function transroute(){
+    Img1.style.transform = 'rotate(' + deg++%360 + 'deg)';
+}
+
 Audio.oncanplay = function(){
     StartTime.innerHTML = Change(Audio.currentTime);
     duration = this.duration;
@@ -31,10 +39,12 @@ Audio.oncanplay = function(){
 //     duration = this.duration;
 //     EndTime.innerHTML = Change(duration);
 // };
+
 // window.onload = function(){
 //     StartTime.innerHTML = Change(Audio.currentTime);
 //     duration = Audio.duration;
 //     EndTime.innerHTML = Change(duration);
+//     console.log(duration)
 // };
 
 //改变时间的格式
@@ -46,14 +56,19 @@ function Change(time){
 
 function musicPlay(){
     Audio.play(); 
-    Img1.className = 'img1';
     play.className = 'iconfont icon-bofang';
     timer = setInterval(movePro,200);
+    if(flag1){
+        timer3 = setInterval(transroute,20);
+        flag1 = false;
+    }
 }
 function musicPause(){
     Audio.pause();
     play.className = 'iconfont icon-play_icon';
     clearInterval(timer);
+    clearInterval(timer3);
+    flag1 = true;
 }
 Btn.onmouseup = function(){
     if(Audio.paused){
@@ -69,8 +84,9 @@ function movePro(){
     StartTime.innerHTML = Change(currentTime);
     ProActive.style.width = currentTime/duration * allWidth + 8 + 'px';
 }
-//播放器上一首、下一首按钮实现
+//播放器上一首、下一首按钮实现以及图片的切换
 var arr = ['source/1.mp3','source/2.mp3','source/3.mp3'];
+var arrimg = ['img/1.jpg','img/3.jpg','img/4.jpg'];
 var num = 0;
 Prev.onclick = function(){
     clearInterval(timer);
@@ -80,6 +96,7 @@ Prev.onclick = function(){
         num--;
     }
     Audio.src = arr[num];
+    Img1.src = arrimg[num];
     Audio.load();
     musicPlay();  
 };
@@ -91,6 +108,7 @@ Next.onclick = function(){
         num++;
     }
     Audio.src = arr[num];
+    Img1.src = arrimg[num];
     Audio.load();
     musicPlay();
 };

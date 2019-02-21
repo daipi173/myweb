@@ -28,20 +28,11 @@ body{
     border: 50px solid black;
     border-radius: 50%;   
 }
-.container .image .img1{
-    animation: img1 linear 10s infinite;
-}
+
 .icon-play_icon{
     font-size: 20px;
 }
-@keyframes img1{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{ 
-        transform: rotate(360deg);
-    }
-}
+
 .icon-jingyinmute33{
     height: 37px;
     width: 37px;
