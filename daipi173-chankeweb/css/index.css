@@ -1,0 +1,614 @@
+body,ul,li,a,h2,h1,p{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    height: 100px;
+}
+header .nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: #212121;
+    transition: all 0.3s;
+}
+header .nav .warpper{
+    display: flex;
+    justify-content: center;
+    /* width: 680px; */
+    margin: 0 auto;
+}
+header .nav .warpper a{
+    text-decoration: none;
+}
+.nav .warpper2{
+    display: none;
+}
+#warpper3{
+    display: none;
+}
+@media screen and (max-width:680px){
+    header .nav .warpper{
+        display: none;
+    }
+    header .nav .warpper2{
+        height: 60px;
+    }
+    header .nav .warpper2 .warpper2-box{
+        position: relative;
+        margin: 0 50px;
+        width: 100%;
+    }
+    header .nav .warpper2 .warpper2-box .nav-img{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -17px;
+        height: 34px;
+        width: 38px;
+        background: url('../img/logo.png') no-repeat;
+    }
+    header .nav .warpper2 .warpper2-box .nav-right{
+        position: absolute;
+        right: 0;
+        height: 60px;
+        line-height: 60px;
+        width: 38px;
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        cursor: pointer;
+    }
+    header .nav .warpper2{
+        display: flex;
+    }
+    header .warpper1{
+        width: 100%;
+        background: #000;
+    }
+    header .warpper1 div{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        margin-left: 50px;
+    }
+    header .warpper1 a{
+        color: #fff;
+    }
+}
+header .nav .warpper div{
+    position: relative;
+    width: 20%;
+    text-align: center;
+}
+header .nav .warpper .nav-img{
+    background: url('../img/logo.png') no-repeat center;
+}
+header .nav .warpper a{
+    color: #fff;
+}
+header .nav .warpper p{
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    margin-left: -23px;
+    width: 46px;
+    border-bottom: 1px solid #fff;
+    transition: transform 1s;
+}
+.nav_p{
+    transform: scale(0);
+}
+/*主体内容*/
+main .main-img{
+    width: 100%;
+    height: 700px;
+    background: url('../img/rich-tervet.jpg') no-repeat center;
+}
+main .main-free{
+    position: relative;
+    background: #f2f2f2;
+    height: 200px;
+}
+@media screen and (min-width:992px){
+    main .container{
+        width: 950px;
+    }
+    main .main-free .content-box{
+        position: absolute;
+        top: 50%;
+        margin-top: -32px;
+        width: 100%;
+    }
+}
+main .main-free h2{
+    font-weight: normal; 
+    margin-top: 0;
+    padding-top: 15px;
+}
+main .main-free h2:nth-child(2){
+    color: #acacac;
+    /* height: 120px; */
+    border-bottom: 2px solid #acacac;
+}
+main .main-btn{
+    width: 209px;
+    height: 64px;
+    line-height: 64px;
+    /* margin-top: 58px; */
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 32px;
+    background: #000;
+}
+/*讲师团队*/
+@media screen and (max-width:768px){
+    main .container{
+        width: 400px;
+    }
+}
+@media screen and (min-width:768px){
+    main .container{
+        width: 735px;
+    }
+}
+@media screen and (min-width:880px){
+    main .container{
+        width: 840px;
+    }
+}
+@media screen and (min-width:1200px){
+    main .container{
+        width: 1150px;
+    }
+}
+main .main-team{
+    background: #212121;
+    padding: 0;
+}
+main .main-team .main-bigbox{
+    margin: 0 auto;
+}
+main .main-team .main-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 76px;
+    user-select: none;
+}
+main .main-team .main-left{
+    padding-top: 134px;
+}
+main .main-team .main-left .main-group{
+    text-indent: 10px;
+    border-left: 2px solid #fff;
+}
+main .main-team .main-left h1,
+main .main-team .main-left p{
+    color: #fff;
+    font-weight: normal;
+}
+main .main-team .main-left p{
+    font-size: 14px;
+}
+main .main-team .main-right{
+    padding-top: 134px;
+    color: #fff;
+}
+main .teacher-img{
+    width: 100%;
+}
+/*讲师图片*/
+.container .teachers-info{
+    position: relative;
+}
+.container .teacher-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 35px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.container .teacher-info h4{
+    text-align: center;
+}
+.container .teacher-info:hover{
+    opacity: 1;
+}
+.container .teacher-resume{
+    margin-top: 42px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+/*核心模块*/
+.center-model{
+    margin-top: 175px;
+    background: #fff;
+}
+.center-model .core-model{
+    padding-top: 184px;
+    height: 690px;
+}
+.core-model .item1{
+    width: 306px;
+    font-size: 14px;
+}
+.core-model .item .item1{
+    border-left: 2px #212121 solid;
+    text-indent: 5px;
+}
+.core-model .item1 div{
+    font-size: 30px;
+}
+.core-model .item1 div span,
+.core-model .item2 div span,
+.core-model .item3 div span,
+.core-model .item4 div span,
+.core-model .item5 div span{
+    color: #c7c7c7;
+}
+.core-model .item2 .title-bg{
+    background: url('../img/core1.png') no-repeat;
+}
+.core-model .item3 .title-bg{
+    background: url('../img/core2.png') no-repeat;
+}
+.core-model .item4 .title-bg{
+    background: url('../img/core3.png') no-repeat;
+}
+.core-model .item5 .title-bg{
+    background: url('../img/core4.png') no-repeat;
+}
+.core-model .item2 div,
+.core-model .item3 div,
+.core-model .item4 div,
+.core-model .item5 div{
+    height: 35px;
+    line-height: 35px;
+    text-indent: 50px;
+}
+@media screen and (max-width:756px){
+    .center-model .core-model{
+        height: 790px;
+    }
+    .center-model .container .core-model{
+        margin-bottom: 156px;
+    }
+    .center-model .container .core-model .col-xs-12{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width:768px){
+    .center-model .container .core-model .col-sm-6{
+        margin-bottom: 10px;
+    }
+    .center-model .container .core-model{
+        margin-bottom: 9px;
+    }
+}
+@media screen and (min-width:1200px){
+    .center-model .container .core-model .col-lg-4{
+        margin-bottom: 143px;
+    }
+}
+/*主要的人群*/
+main .pepole{
+    background: #f3f3f3;
+    height: 380px;
+    padding-top: 116px;
+    padding-bottom: 100px;
+}
+.pepole .student,
+.pepole .social,
+.pepole .interes{
+    width: 300px;
+    padding-left: 94px;
+    font-size: 14px;
+}
+.pepole .student{
+    background: url('../img/object1.png') no-repeat;
+}
+.pepole .social{
+    background: url('../img/object2.png') no-repeat;
+}
+.pepole .interes{
+    background: url('../img/object3.png') no-repeat;
+}
+.pepole .pepole-item{
+    padding-left: 22px;
+    border-left: 2px #c7c7c7 solid;
+}
+.pepole .pepole-item div{
+    font-size: 18px;
+}
+.pepole .pepole-item div span{
+    color: #c7c7c7;
+}
+/*前端工程师*/
+.engineer{
+    height: 1124px;
+    padding-top: 137px;
+    color: #fff;
+    background: url('../img/bg.jpg') no-repeat center;
+    background-size: cover;
+}
+.engineer .engineer-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 82px;
+}
+.engineer .engineer-left{
+    text-indent: 10px;
+    border-left: 2px solid #fff;
+}
+.engineer .engineer-left div{
+    font-size: 30px;
+}
+.engineer .engineer-right{
+    font-size: 16px;
+}
+/*前端介绍*/
+.zero-resume .zero-item{
+    position: relative;
+    width: 398px;
+    height: 240px;
+    padding: 40px;
+    background: #000;
+    font-size: 14px;
+    color: #c2c2c2;
+    text-align: center;
+}
+.zero-resume .zero-item .zero-title{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.zero-resume .zero-item .square{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: #c2c2c2;
+}
+@media screen and (max-width:1500px){
+    .zero-resume .zero-item{
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width:1000px){
+    .zero-resume{
+        width: 398px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .engineer{
+        height: 1800px;
+    }
+}
+@media screen and (max-width:500px){
+    main .container{
+        width: 380px;
+    }
+    .zero-resume{
+        width: 350px;
+    }
+    .zero-resume .zero-item{
+        width: 250px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/*一个大项目*/
+.big{
+    position: relative;
+    height: 1060px;
+    background: #fff;
+    padding: 140px 0;
+}
+.big .big-wrapper{
+    position: relative;
+    z-index: 100;
+}
+.big .big-box{
+    margin-bottom: 50px;
+    border-left: 2px solid #000;
+    text-indent: 10px;
+}
+.big .big-box div{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.big .big-box div span{
+    color: #ccc;
+}
+.big .big-box .big-p{
+    margin: 0;
+    font-size: 16px;
+}
+.big .big-resume{
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 70px;
+}
+.big .big-resume1{
+    margin-bottom: 55px;
+}
+.big .big-resume1,
+.big-resume2{
+    margin-left: 12px;
+}
+.big .big-bg{
+    position: absolute;
+    right: 0;
+    top: 140px;
+    background: url('../img/projectBg.jpg') no-repeat;
+    height: 718px;
+    width: 724px;
+}
+.big-resume2 .big-btn{
+    display: flex;
+    margin-top: 25px;
+}
+.big-resume2 .big-btn div:first-child,
+.big-resume2 .big-btn div:nth-child(3),
+.big-resume2 .big-btn div:nth-child(5){
+    height: 45px;
+    line-height: 45px;
+    width: 215px;
+    border: 1px dashed #999999;
+    text-align: center;
+    border-radius: 10px;
+}
+.big-btn .big-img{
+    height: 45px;
+    line-height: 45px;
+    margin: 0 24px;
+}
+/*高效+更酷*/
+.effic{
+    height: 720px;
+    background: #f3f3f3;
+}
+.effic .effic-box{
+    padding-top: 186px;
+    text-indent: 6px;
+}
+.effic .effic-group{
+    border-left: 2px solid #000;
+}
+.effic .effic-item{
+    width: 230px;
+    height: 220px;
+}
+.effic .effic-group div{
+    font-size: 30px;
+}
+.effic .effic-group div span{
+    color: #dddcdc;
+}
+.effic-item .effic-title{
+    margin-bottom: 10px;
+}
+@media screen and (max-width:1000px) and (min-width:570px){
+    .effic{
+        height: 1000px;
+    }
+    .effic .effic-box .effic-item:first-child{
+        height: 120px;
+    }
+}
+@media screen and (max-width:680px){
+    .effic{
+        height: 1100px;
+    }
+    .effic .effic-item{
+        height: 150px;
+    }
+    .effic .effic-box .effic-item:first-child{
+        height: 120px;
+    }
+    .effic .effic-item:nth-child(6){
+        height: 230px;
+    }
+}
+@media screen and (max-width:480px){
+    .effic{
+        height: 1600px;
+    }
+}
+/*微信聊天*/
+.weixin{
+    position: relative;
+    height: 856px;
+}
+.weixin .weixin-bg{
+    position: absolute;
+    bottom: 0;
+    height: 603px;
+    background: url('../img/wechat.jpg') no-repeat;
+}
+/*页面底部(联系我们)*/
+footer .footer-conceren{
+    height: 688px;
+    background: #212121;
+    padding-top: 160px;
+    color: #fff;
+    font-size: 14px;
+}
+footer .conceren-group{
+    border-left: 2px solid #fff;
+    text-indent: 10px;
+}
+footer .conceren-group div{
+    font-size: 30px;
+}
+footer .conceren-code{
+    margin-top: 114px;
+    /* width: 520px; */
+}
+.footer-phone .phone div{
+    height: 30px;
+    line-height: 30px;
+}
+.footer-phone .phone{
+    border-left: 2px solid #fff;
+}
+.footer-phone .phone-bg{
+    height: 60px;
+    line-height: 60px;
+}
+.footer-phone .phone-bg:first-child{
+    margin-bottom: 65px;
+}
+.conceren-code .code-img img{
+    margin-right: 68px;
+}
+.footer-about .about{
+    margin-bottom: 42px;
+}
+.footer-about .list{
+    padding: 0;
+}
+@media screen and (min-width:768px) and (max-width:850px){
+    footer .footer-about,
+    .footer-phone .phone-bg{
+        margin-top: 20px;
+    }
+    footer .footer-conceren{
+        height: 800px;
+    }
+}
+@media screen and (max-width:768px){
+    footer .footer-conceren{
+        height: 1100px;
+    }
+}
+@media screen and (max-width:500px){
+    footer .code-img{
+        padding: 0;
+    }
+    footer .code-img img:first-child{
+        margin: 0;
+    }
+}
+footer .footer-bottom{
+    height: 104px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 104px;
+}

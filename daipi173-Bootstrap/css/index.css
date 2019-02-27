@@ -1,0 +1,249 @@
+body,ul,li,a,p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-size: 14px;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;
+    /* overflow-x: hidden; */
+}
+/*Bootstrap巨幕*/
+.jumbotron.bg-center{
+    padding-bottom: 80px;
+    margin-bottom: 0;
+}
+.bg-center{
+    background: linear-gradient(45deg,#020031 0,#6d3353 100%);
+}
+.bg-center::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: url('../img/bg.png') repeat center;
+    opacity: 0.4;
+}
+.text-center .h1{
+    margin-bottom: 20px;
+}
+.p-center{
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+}
+.bg-center .text-center #p-center{
+    box-shadow: 0 -5px 0px -1px rgb(42,100,150) inset;
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+.bg-center .text-center #p-center:hover{
+    opacity: 0.85;
+}
+.text-center{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+}
+.bg-center .text-center h1{
+    margin-top: 67px;
+    font-size: 60px;
+    font-weight: bold;
+}
+@media screen and (min-width: 768px){
+    .jumbotron.bg-center{
+        padding-top: 138px;
+        padding-bottom: 110px;
+    }
+    .bg-center .text-center h1{
+        margin-top: 0;
+        font-size: 90px;
+    }
+    .bg-center .text-center .btn-center{
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 992px){
+    .jumbotron.bg-center{
+        padding-top: 138px;
+        padding-bottom: 110px;
+    }
+    .bg-center .text-center h1{
+        margin-top: 0;
+        font-size: 100px;
+    }
+    .bg-center .text-center .btn-center{
+        font-size: 30px;
+    }
+}
+.text-center .btn-center{
+    margin-bottom: 30px;
+}
+.a-center{
+    color: gray;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+}
+.a-center:hover{
+    color: #fff;
+}
+/*问答社区和新浪微博*/
+.social{
+    position: relative;
+    z-index: 1;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.social ul{                 
+    margin-bottom: 0;
+    font-size: 0;
+    /* border: 1px solid #000; */
+}
+.social ul li{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+}
+.social ul li:nth-child(2){
+    padding: 0 10px;
+}
+.social ul li a{
+    color: #555;
+}
+.social ul li:nth-child(2) a{
+    color: #ccc;
+}
+.social ul li:nth-child(3) :hover{
+    color: #d9534f;
+}
+.social ul li i{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+}
+/*Bootstrap相关优质项目推荐*/
+.resume .resume-header{
+    width: 60%;
+    margin: 60px auto 40px;
+    text-align: center;
+}
+.resume .page-header h2{
+    letter-spacing: -1px;
+}
+@media screen and (min-width: 768px){
+    .resume .page-header h2{
+        font-size: 42px;
+    }
+}
+/*图片*/
+.row1 .container{
+    padding: 0;
+}
+.row1 .thumbnail{
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    height: 336px;
+}
+.row1 .thumbnail a{
+    text-decoration: none;
+}
+.row1 .thumbnail .caption{
+    height: 200px;
+    text-align: center;
+    color: #555;
+}
+/*页面底部*/
+footer{
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #777;
+}
+footer .container{
+    padding: 0;
+}
+/* .footer-box{
+    border: 1px solid red;
+} */
+.footer-box::before,
+.footer-box::after{
+    content: '';
+    display: table;
+}
+.footer-box::after{
+    content: '';
+    clear: both;
+}
+footer .footer-left img{
+    margin: 10px 0;
+}
+footer .footer-right{
+    padding: 0;
+}
+footer .footer-right h4{
+    font-size: 16px;
+    color: #563d7c;
+}
+footer .footer-right a{
+    color: #777;
+}
+footer .footer-right .about,
+footer .footer-right .contact,
+footer .footer-right .website,
+footer .footer-right .sponsor{
+    float: left;
+    padding: 0 15px;
+}
+/* footer .number ul{
+    border: 1px solid red;
+} */
+footer .number ul{
+    text-align: center;
+    font-size: 0;
+}
+footer .number ul li{
+    display: inline-block;
+}
+footer .number ul li a,
+footer .number ul li:last-child{
+    color: #777;
+    font-size: 13px;
+}
+footer .number ul li span{
+    font-size: 13px;
+    color: #ccc;
+}
+footer .number ul li:nth-child(2){
+    padding: 10px;
+}
+/*侧边栏向上标签*/
+#icon-btn{
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  height: 46px;
+  width: 46px;
+  background: #777;
+  text-decoration: none;
+  opacity: 0.8;
+}
+#icon-btn:hover{
+    opacity: 1;
+}
+#icon-btn i{
+    display: inline-block;
+    height: 46px;
+    line-height: 46px;
+    width: 46px;
+    color: #eee;
+    font-size: 46px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>自动切换焦点图</title>
+    <style>
+    #small{
+        float: left;
+        width: 200px;
+    }
+    #small img{
+        width: 200px;
+    }
+    #big{ 
+        float: left;
+        width: 600px;
+        margin-left: 20px;
+    }
+    #big img{
+        width: 600px;
+    }
+    .clearfixed::after{
+        content: "";
+        display: table;
+        clear: both; 
+    }
+    .box{
+        position: relative;
+    }
+    #pointer{
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* top: 234px; */
+        margin-top: 6px;
+        width: 200px;
+    }
+    #big img{
+        display: none;
+    }
+    #big .bimg{
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+    <div class="clearfixed box">
+        <img src="./img/pointer.png" alt="" id="pointer">
+    <div id="small">
+        <img src="./img/1.jpg" alt="">
+        <img src="./img/2.jpg" alt="">
+        <img src="./img/3.jpg" alt="">
+    </div>
+    <div id="big">
+        <img src="./img/1.jpg" alt="" class="bimg">
+        <img src="./img/2.jpg" alt="">
+        <img src="./img/3.jpg" alt="">
+    </div>
+    </div>
+    <script>
+    var small = document.getElementById('small');
+    var simg = small.getElementsByTagName('img');
+    var big = document.getElementById('big');
+    var bimg = big.getElementsByTagName('img');
+    var len = simg.length;
+    var pointer = document.getElementById('pointer');
+    var arryTop = [0,118,234];
+    function OverFunction(){
+        for(var i=0 ; i<len ; i++){
+            if(this.count == i){
+                bimg[i].className = "bimg";
+                //pointer框的移动
+                Top = arryTop[i];
+                nowTop = pointer.offsetTop;
+                if(timer == null){
+                timer = setInterval(moveTop,10);
+                j = 0;
+                clearInterval(timer1);
+                // console.log('clear')
+                }
+            }else{
+                bimg[i].className = "";
+            }
+        }
+    }  
+    for(var i=0 ; i<len ; i++){
+        simg[i].onmouseover = OverFunction;
+        simg[i].count = i;
+    }   
+    //循环播放  
+    pointer.onmouseout = function(){
+        timer1 = setInterval(loopFun,1500);
+        // console.log('start')
+    }
+    var j = 0;
+    var timer1 = setInterval(loopFun,1500);
+    function loopFun(){
+        for(var i = 0; i < len ; i++){
+            if(j == i){
+                bimg[i].className = "bimg";
+                //pointer框的移动
+                Top = arryTop[i];
+                nowTop = pointer.offsetTop;
+                timer = setInterval(moveTop,10);
+            }else{
+                bimg[i].className = "";
+            }
+        }
+        j++;
+        if(j == 3){
+            j = 0;
+        }
+    }
+
+
+
+    var Top;
+    var nowTopm;
+    var gainTop = 8;
+    var timer = null;  //只启动一个线程
+    function moveTop(){
+        //Top从上往下运动
+        if(nowTop < Top){
+            nowTop += gainTop;
+            if(nowTop >= Top){
+            nowTop = Top;
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+       //Top从下往上运动
+       if(nowTop > Top){
+            nowTop -= gainTop;
+            if(nowTop <= Top){
+            nowTop = Top;
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+        pointer.style.top = nowTop + "px";
+    }
+  
+    </script>
+</body>
+</html>

@@ -7,7 +7,7 @@ body,ul,li,img{
 /* 头部导航条 */
 .navbar-inverse{
     position: fixed;
-    z-index: 1000;
+    z-index: 100000;
     width: 100%;
     margin-bottom: 0;
     border-radius: 0;

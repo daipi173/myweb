@@ -1,0 +1,139 @@
+body,ul,li,a{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.nav{
+    background: rgba(0, 0, 0, 0.8);
+    height: 60px;                                           
+}
+.box{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.box .header-min{
+    display: none;
+}
+.header-min li:first-child i{
+    color: blue;
+    font-size: 60px;
+}
+.header-min li:last-child i{
+    color: #ccc;
+    font-size: 40px;
+}
+.header-max,.header-min{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+.header-max.header-active{
+    display: flex;
+}
+.header-max li,
+.header-min li{
+    height: 60px;
+}
+.header-max li a,
+.header-max li a i,
+.header-min li a,
+.header-min li a i{
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+}
+.header-max li:nth-child(1) a{
+    color: yellow;
+}
+.header-max li:nth-child(2) a{
+    color: purple;
+}
+.header-max li:nth-child(3) a{
+    color: blue;
+}
+.header-max li:nth-child(4) a{
+    color: green;
+}
+.header-max li:nth-child(5) a{
+    color: red;
+}
+.header-max li:nth-child(3) a i{
+    font-size: 60px;
+}
+@media only screen and (max-width:620px){
+    .box .header-min{
+        display: flex;
+    }
+    .header-max{
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        background: #000;
+    }
+    .header-max .fish{
+        display: none;
+    }
+    .header-max li{
+        width: 80%;
+        margin: 0 auto;
+        border-bottom: 1px solid #ccc;
+    }
+    .header-max li:last-child{
+        border-bottom: 0;
+    }
+    #main{
+        width: 80%;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+    }
+    #main li{
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+main{
+    display: flex;
+    /* margin: 100px auto 0; */
+    padding: 100px 0 0;
+    background: rgb(18,18,22);
+}
+.main{
+    /* border: 1px solid red; */
+}
+.main li{
+    display: inline-block;
+    width: 30%;
+    height: 200px;
+    padding: 30px;
+    border-top: 1px solid #ccc;
+}
+.main li a{
+    color: #fff;
+}
+.main li:nth-child(2n+1){
+    float: left;
+    margin-left: 30px;
+}
+.main li:nth-child(2n){
+    float: right;
+    margin-right: 30px;
+}
+.main::before,
+.main.main::after{
+    content: '';
+    display: table;
+}
+.main::after{
+    content: '';
+    clear: both;
+}
+

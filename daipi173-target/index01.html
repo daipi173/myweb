@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #box{
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+    var box = document.getElementById('box');
+    // box.onmouseover = function(){
+    //     console.log('enter')
+    // }
+    box.onmouseout = function(){
+        console.log('out')
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.box{
+    height: 20px;
+    margin-bottom: 50px;
+    font-size: 26px;
+    text-align: center;
+}
+.container{
+    width: 650px;
+    margin: 20px auto;
+}
+#table{
+    float: left;
+}
+td{
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
+#active{
+    opacity: 0.6;
+}
+.play{
+    background: rgb(0,122,204);
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.blank{
+    border-radius: 50px;
+    background: orange;
+}
+.green{
+    border-radius: 50px;
+    background: greenyellow;
+}
+.green .two-award,
+.green .one-award,
+.green .no-win{
+    display: none;
+    color: #fff;
+}
+.bg1{
+    background: url('../img/bg.jpg') no-repeat 4% 5%;
+}
+.bg2{
+    background: url(../img/bg.jpg) no-repeat 4% 94%;
+}
+.bg3{
+    background: url(../img/bg.jpg) no-repeat 73% 64%;
+}
+.bg4{
+    background: url(../img/bg.jpg) no-repeat 51% 94%;
+}
+.award{
+    float: left;
+    margin-left: 100px;
+    height: 200px;
+    width: 200px;
+    /* border: 1px solid #000; */
+}
+.award img{
+    display: none;
+    width: 100%;
+}
+.container::after{
+    content: '';
+    display: table;
+    clear: both;
+}

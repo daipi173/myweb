@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>刮刮卡</title>
+    <style>
+    canvas{
+        background-repeat: no-repeat; 
+        background-position: center;    
+    }
+    </style>
+</head>
+<body>
+    <canvas height="400" width="400" id="myCanvas"></canvas>
+    <script>
+    var myCanvas = document.getElementById('myCanvas');
+    var pen = myCanvas.getContext('2d');
+    var w = myCanvas.width;
+    var h = myCanvas.height;
+    var lastPostion = {};
+    //入口函数 干净整洁
+    function init(){
+        var random = Math.random();
+    // if(random < 0.5){
+    //     myCanvas.style.backgroundImage = 'url(img/1.jpg)';
+    // }else{
+    //     myCanvas.style.backgroundImage = 'url(img/2.jpg)';
+    // }
+    var img = new Image();
+    if(random > 0.3){
+        img.src = './img/1.jpg';
+    }else{
+        img.src = './img/2.jpg';
+    }
+    //需要等图片加载完成之后才能用鼠标按下事件
+    img.onload = function(){
+        myCanvas.style.backgroundImage = 'url('+img.src+')';
+        //鼠标按下
+        myCanvas.addEventListener('mousedown',downFunction);
+    };
+       //制作蒙尘
+        pen.beginPath();
+        pen.fillStyle = '#ccc';    //设置为'rgb(0,0,0)'，点击一下就会有全部刮开，需要在for循环那里做出判断，i的起始值为3
+        pen.fillRect(0,0,w,h);
+        pen.globalCompositeOperation = 'destination-out';       
+    }
+    init();
+
+    function downFunction(e){
+        lastPostion.x = e.clientX - myCanvas.offsetLeft;
+        lastPostion.y = e.clientY - myCanvas.offsetTop;
+       
+        pen.beginPath();
+        pen.arc(lastPostion.x,lastPostion.y,20,0,Math.PI*2);
+        pen.closePath();
+        pen.fill();
+
+        myCanvas.addEventListener('mousemove',moveFunction);
+        document.body.addEventListener('mouseup',upFunction);
+    }
+    function moveFunction(e){
+        var x = e.clientX - myCanvas.offsetLeft;
+        var y = e.clientY - myCanvas.offsetTop;
+        pen.beginPath();
+        pen.moveTo(lastPostion.x,lastPostion.y);
+        pen.lineTo(x,y);
+        pen.lineWidth = 40;
+        pen.lineCap = 'round';
+        pen.stroke();
+
+        lastPostion.x = x;
+        lastPostion.y = y;
+        
+    }
+   function upFunction(){
+    myCanvas.removeEventListener('mousemove',moveFunction);
+    document.body.removeEventListener('mouseup',upFunction);
+    clearCover();
+   }
+   function clearCover(){
+       var imageData = pen.getImageData(0,0,w,h);
+       var sum = 0;
+    //    console.log(imageData.data);
+       for(var i=0 ; i<imageData.data.length ; i+=4){     //for(var i=3 ; i<imageData.data.length ; i+=4)
+           //只需要判断rgba中a的透明度是不是为0      
+           if(imageData.data[i] == 0){
+               sum++;
+           }
+       }
+       //循环遍历完后再进行一个判断，是否超过70%
+       if(sum  > w*h*0.7){
+           pen.clearRect(0,0,w,h);
+       }
+   }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+body,ul,li,a,img,p{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    min-width: 1205px;
+}
+p{
+    color: #000;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    background: rgb(46,51,23);
+}
+nav{
+    position: relative;
+}
+nav .chanke{
+    position: absolute;
+    left: 64px;
+}
+nav .chanke h2{
+    color: #fff;
+    cursor: pointer;
+}
+nav .text input{
+    height: 25px;
+    outline: 0;
+}
+.section{
+    display: none;
+    position: absolute;
+    right: 23px;
+    top: 39px;
+    height: 189px;
+    width: 178px;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+.section li a{
+    display: inline-block;
+    width: 100%;
+    padding: 9px 15px;
+    font-size: 14px;
+    color: #666;
+}
+.section li{
+    margin-left: 7px;
+    width: 165px;
+}
+.section li:first-child{
+    border-bottom: 1px solid #ccc;
+    margin-left: 7px;
+}
+.section li:hover{
+    background: rgb(243,244,246);
+}
+.section li a:hover{
+    color: orange;
+}
+.section li a span{
+    margin-left: 41px;
+    font-size: 12px;
+    color: orange;
+}
+.section li a span:hover{
+    color: red;
+}
+.text,i{
+    display: flex;
+    align-items: center;
+}
+.text i img{
+    display: inline-block;
+    height: 31px;
+    width: 31px;
+    cursor: pointer;
+}
+.text input:focus{
+    width: 220px;
+}
+.text i img:hover{
+    opacity: 0.8;
+}
+.nav{
+    display: flex;
+}
+.nav li{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.nav li:first-child{
+    margin-left: 40px;
+}
+.wrapper{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin-right: 40px;
+    overflow: hidden;
+}
+nav .img{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.nav li a{
+    color: #fff;
+}
+.nav li a:hover{
+    color: rgb(32,174,78);
+}
+.main1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    height: 190px;
+    background: url('../img/bg.png') no-repeat;
+}
+.main1 .trans{
+    align-self:flex-start;
+    width: 520px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.main1 .trans span{
+    display: inline-block;
+    animation: Flash 10s infinite linear;
+    color: #fff;
+    font-weight: bold;
+}
+ @keyframes Flash{
+    0%{
+        transform: translate(521px,0);
+    }
+    100%{ 
+        transform: translate(-280px,0);
+    }
+}
+.main1 .bgimg{
+    display: flex;
+}
+.main1 .bgimg img{
+   display: inline-block;
+   border: 5px solid rgb(245,207,155); 
+   margin-right: 20px;
+}
+.main1 .bgtitle{
+    color: #fff;
+    font-family: MicrosoftYaHei;
+}
+.main1 .bgtitle i{
+    display: inline-block;
+    background: url('../img/2.png') no-repeat;
+    margin-left: 10px;
+    width: 18px;
+    height: 14px;
+}
+.main2  section input{
+    display: none;
+}
+.main2  section #sheet:checked ~ .introduce .sheet,
+.main2  section #lesson:checked ~ .introduce .lesson,
+.main2  section #lecture:checked ~ .introduce .lecture,
+.main2  section #about:checked ~ .introduce .about
+{
+    color: green;
+    border-bottom: 5px solid green;
+}
+main .main3 .more{
+    display: none;
+}
+.main2  section .introduce{
+    display: flex;
+    width: 600px;
+    margin-left: 52px;
+}
+.main2  section .introduce li{
+    width: 36px;
+    height: 60px;
+    line-height: 60px;
+    color: #666;
+    font-size: 18px;
+    margin-right: 76px;
+    cursor: pointer;
+}
+.main2  section .introduce li label{
+    display: inline-block;
+    height: 100%;
+}
+.main2  section .introduce li:last-child{
+    width: 54px;
+}
+.main3{
+    display: flex;
+    margin-top: 15px;
+}
+.main3 .left{
+    position: relative;
+    width: 150px;
+    height: 400px;
+    background: #474443;
+}
+.main3 .left img{
+    position: absolute;
+    left: 50%;
+    margin-left: -58px;
+    top: 55px;
+}
+.main3 .left p{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #fff;
+}
+.main3 .center{
+    flex-grow: 1;
+    background: rgb(246,246,246);
+    padding-left: 30px;
+    padding-bottom: 146px;
+}
+.main3 .right{
+    width: 150px;
+    height: 400px;
+    background: #474443;
+}
+.main3 .center .resume{
+    color: #333;
+    font-size: 24px;
+    margin: 15px 0;
+}
+.main3 .center .teacher{
+    display: flex;
+}
+.main3 .center .teacher li{
+    width: 225px;
+    height: 335px;
+    /* border: 1px solid #000; */
+    margin-right: 22px;
+}
+.main3 .center .teacher li div{
+    text-align: center;
+    color: #000;
+}
+.main3 .center .teacher li img{
+    height: 225px;
+    width: 225px;
+}
+.main3 .center .teacher li p{
+    background: #fff;
+}
+/*进行多行打点*/
+.main3 .center .teacher li .p1{
+    display: -webkit-box;
+    padding: 0 10px;
+    max-width: 225px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+    background: #fff;
+}
+.main3 .course{
+    display: flex;
+    width: 223px;
+    height: 271px;
+    /* border: 1px solid #000; */
+}
+.main3 .course li{
+    height: 271px;
+    background: #fff;
+    margin-right: 22px;
+}
+.main3 .course li h3{
+    font-weight: 300;
+}
+.main3 .course li .img1{
+    overflow: hidden;
+}
+.main3 .course li .img1{
+    width: 223px;
+    height: 124px;
+}
+.main3 .course li img{
+    transition: all 0.6s;
+}
+.main3 .course li img:hover{
+    transform: scale(1.2);
+}
+.main3 .course li .content{
+    margin-left: 10px;
+}
+.main3 .course li h3{
+    font-size: 14px;
+    color: #333;
+}
+.main3 .course li .p2{
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 25px;
+}
+.main3 .course li .p3{
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.main3 .course li span{
+    font-size: 14px;
+    color: #555;
+}
+.main3 .ul-right{
+    display: none;
+}
+.flexd{
+    position: fixed;
+    height: 100px;
+    width: 70px;
+    background: #fff;
+    margin: 0 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    font-weight: bold;
+    border-radius: 10px;
+    line-height: 36px;
+}
+footer{
+    height: 150px;
+    /* border: 1px solid #000; */
+    font-size: 14px;
+    background: #474443;
+}
+footer .container{
+    position: relative;
+    padding: 30px 0;
+    width: 1205px;
+    height: 90px;
+    margin: 0 auto;
+}
+footer .container p,
+footer .container a{
+    color: #fff;
+}
+footer .container p{
+    margin-bottom: 11px;
+}
+footer .container a{
+    margin-right: 17px;
+}
+footer .container a:hover{
+    text-decoration: underline;
+}
+footer .container .left{
+    position: absolute;
+    left: 0;
+    width: 702px;
+    height: 90px;
+    /* border: 1px solid #000; */
+}
+footer .container .right{
+    position: absolute;
+    right: 0;
+    font-size: 0;
+    width: 242px;
+    height: 90px;
+    /* border: 1px solid #000; */
+}
+footer .container .number{
+    color: #999;
+    font-size: 14px;
+    margin: 15px 0 0;
+}
+footer .container .right .right-img a{
+    display: inline-block;
+    background: url('../img/9.png') no-repeat;
+    width: 111px;
+    height: 32px;
+}
+footer .container .right .right-img a:last-child{
+    display: inline-block;
+    background: url('../img/9.png') no-repeat;
+    background-position-y: -42px;
+    width: 111px;
+    height: 32px;
+    margin-right: 0;
+}
+footer .container .right .right-img{
+    margin-bottom: 25px;
+}
+footer .container .right .right-logo{
+    width: 70%;
+    height: 22px;
+    padding-left: 72px;
+}
+footer .container .right .right-logo p{
+    display: inline-block;
+    height: 22px;
+    text-align: center;
+    width: 70px;
+    color: #fff;
+    font-size: 14px;
+    vertical-align: top;
+}
+footer .container .right .right-logo a{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 0;
+    margin-left: 4px;
+}
+footer .container .right .right-logo a:nth-child(2){
+    background: url('../img/10.png') no-repeat -32px -52px;
+}
+footer .container .right .right-logo a:nth-child(3){
+    background: url('../img/10.png') no-repeat -32px -72px;
+}   
+footer .container .right .right-logo a:nth-child(4){
+    background: url('../img/10.png') no-repeat -4px -72px;
+}   
+footer .container .right .right-logo a:last-child{
+    background: url('../img/10.png') no-repeat -5px -52px;
+}   

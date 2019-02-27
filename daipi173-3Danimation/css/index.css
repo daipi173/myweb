@@ -1,0 +1,114 @@
+.container{
+    perspective: 800px;
+}
+.box{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 400px auto;
+    transform-style: preserve-3d;
+    animation: play 5s linear infinite;
+}
+.box2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: play1 4s linear infinite;
+}
+.selec1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px;
+    width: 200px;
+}
+@keyframes play{
+    from{
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+@keyframes play1{
+    from{
+    transform: rotateY(0);
+    }
+    to{
+    transform: rotateY(-360deg);
+    }
+}
+.selec{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    line-height: 400px;
+    font-size: 35px;
+    text-align: center;
+    opacity: 0.5;
+}
+.selec1{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 15px;
+    text-align: center;
+    opacity: 0.8;
+}
+.box2 .selec1:nth-child(1){
+    background: orange;
+    transform: translateZ(100px);
+}
+.box2 .selec1:nth-child(2){
+    background: bisque;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.box2 .selec1:nth-child(3){
+    background: lightblue;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.box2 .selec1:nth-child(4){
+    background: lawngreen;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.box2 .selec1:nth-child(5){
+    background: olivedrab;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.box2 .selec1:nth-child(6){
+    background: palevioletred;
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+
+.box .selec:nth-child(1){
+    background: pink;
+    transform: translateZ(200px);
+}
+.box .selec:nth-child(2){
+    background: blueviolet;
+    transform: rotateY(90deg) translateZ(200px);
+}
+.box .selec:nth-child(3){
+    background: burlywood;
+    transform: rotateX(90deg) translateZ(200px);
+}
+.box .selec:nth-child(4){
+    background: yellow;
+    transform: rotateY(-90deg) translateZ(200px);
+}
+.box .selec:nth-child(5){
+    background: greenyellow;
+    transform: rotateX(-90deg) translateZ(200px);
+}
+.box .selec:nth-child(6){
+    background: palegreen;
+    transform: rotateY(180deg) translateZ(200px);
+}

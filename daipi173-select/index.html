@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>全国三级城市联动select选择</title>
+</head>
+<script src="./js/cc.js"></script>
+<body>
+    <select name="" id="privence"></select>
+    <select name="" id="city"></select>
+    <select name="" id="district"></select>
+    <script>
+    var privence = document.getElementById('privence');
+    var city = document.getElementById('city');
+    var district = document.getElementById('district');
+    // var privenceSet = [
+    //     {
+    //         name: "北京",
+    //         cityList: [
+    //             {name: "直辖区",districtList: ['东城区','西城区','崇文区','宣武区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','昌平区']},
+    //             {name: "县",districtList: ['密云县','延庆县']} 
+    //        ],
+    //     },
+    // {
+    //     name: "四川",
+    //     cityList: [
+    //         {name: "成都市",districtList: ['市辖区','锦江区','青羊区','金牛区','武侯区','成华区','龙泉驿区','青白江区','新都区','温江县','金堂县','双流县','郫　县','大邑县','蒲江县','新津县','都江堰市','彭州市']},
+    //         {name: "自贡市",districtList: ['市辖区','自流井区','贡井区','大安区']}    
+    //     ],
+    // }];
+    for(var i=0 ; i<privenceSet.length ; i++){
+        var option = new Option(privenceSet[i].name,privenceSet[i].name);
+        privence.options.add(option);
+    }
+    //最开始默认选择
+    PrivenceFun();
+    CityFun();
+    //监听选中操作
+    privence.onchange = PrivenceFun;
+    city.onchange = CityFun;
+    function PrivenceFun(){   //城市
+        city.options.length = 0;   //进行清空操作                         
+        var cityAry = privenceSet[privence.selectedIndex].cityList;
+        var len = cityAry.length;
+        for(var i=0 ; i<len ; i++){
+            var option = new Option(cityAry[i].name,cityAry[i].name);
+            city.options.add(option);
+        }
+       CityFun();
+    }
+    
+    function CityFun(){  //区
+        district.options.length = 0;
+        var districtAry = privenceSet[privence.selectedIndex].cityList[city.selectedIndex].districtList;
+        var len = districtAry.length;
+        for(var i=0 ; i<len ; i++){
+            var option = new Option(districtAry[i],districtAry[i]);
+            district.options.add(option);
+        }
+    }
+    </script>
+</body>
+</html>

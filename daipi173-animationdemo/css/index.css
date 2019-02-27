@@ -1,0 +1,135 @@
+body,ul,li,img{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.box{
+    margin-top: 50px;
+}
+.box ul{
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    min-width: 650px;
+}
+.box ul li{
+   position: relative;
+   margin: 0 15px;
+   border: 2px solid peru;
+   border-radius: 18px;
+   overflow: hidden;
+   font-size: 0; 
+   background: #ccc;
+}
+.box li img{
+    width: 100%;
+    border-radius: 10px;
+    transform: translate(0,100%);
+    transition: transform 1.5s;
+}
+.box .active img{
+    transform: translate(0,0);
+}
+.box li:nth-child(1) img{
+    transition-delay: 0.1s;
+}
+.box li:nth-child(2) img{
+    transition-delay: 0.15s;
+}
+.box li:nth-child(3) img{
+    transition-delay: 0.2s;
+}
+.box li:nth-child(4) img{
+    transition-delay: 0.25s;
+}
+.box .resume{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+   
+}
+.box .resume .des{
+   padding: 0 16px;
+   font-size: 6px;
+   color: #fff;
+   height: 40px;
+   width: 100%;
+   line-height: 40px;
+   transform: translateY(100%);
+   background: linear-gradient(to bottom,transparent,rgba(0,0,0,0.8));
+   /* transition: transform 0.5s; */
+}
+/* .box li:hover .des{
+    transform: translateY(0);
+} */
+.box ul .resume .intop{
+    transform: translate(0,-50%);
+}
+.box ul .resume .inbottom{
+    transform: translate(0,100%);
+}
+.box ul .resume .inright{
+    transform: translate(100%,0);
+}
+.box ul .resume .inleft{
+    transform: translate(-100%,0);
+}
+
+.box ul .resume .inbottom,
+.box ul .resume .inright,
+.box ul .resume .inleft{
+    animation: Des 0.6s linear forwards;
+}
+.box ul .resume .intop{
+    animation: Des 0.5s linear forwards;
+}
+@keyframes Des{
+   100%{
+       transform: translate(0,0);
+   }
+}
+.box ul .resume .outtop{
+    animation: outtop 0.5s linear;
+}
+.box ul .resume .outbottom{
+    animation: outbottom 0.6s linear;
+}
+.box ul .resume .outleft{
+    animation: outleft 0.6s linear;
+}
+.box ul .resume .outright{
+    animation: outright 0.6s linear;
+}
+@keyframes outtop{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(0,-50%);
+    }
+}
+@keyframes outbottom{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(0,100%);
+    }
+}
+@keyframes outleft{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-100%,0);
+    }
+}
+@keyframes outright{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(100%,0);
+    }
+}

@@ -1,0 +1,228 @@
+h4,p,ul,li,a,dl,dd,dt{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.box{
+    width: 1000px;
+    margin: 80px auto;
+}
+.clearfiexd::before,.clearfiexd::after{
+    content: '';
+    display: table;
+}
+.clearfiexd::after{
+    content: '';
+    clear: both;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.right h4{
+    padding-bottom: .2em;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 700;
+}
+.right p{
+    font-size: 14px;
+    color: #FF0036;
+}
+.price{
+    width: 484px;
+    height: 31px;
+    margin-top: 12px;
+    padding: 5px 0;
+    line-height: 31px;
+    background: #e9e9e9;
+}
+.price p{
+    float: left;
+    margin-left: 8px;
+    font-size: 12px;
+    color: #999;
+}
+.price span{
+    float: left;
+    margin-left: 38px;
+    color: #FF0036;
+    font-size: 24px;
+    font-weight: bolder;
+}
+.icon{
+    position: relative;
+    margin-top: 4px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+}
+.lower-price,.collect,.phone{
+    position: absolute;
+    top: 0;
+}
+.lower-price{
+    left: 65px;
+}
+.collect{
+    left: 150px;
+}
+.phone{
+    left: 200px;
+}
+.carriage{
+    margin-top: 20px;
+     font-size: 12px;
+}
+.carriage span:first-child{
+    color: #999;
+}
+.carriage span:last-child{
+    margin-left: 40px;
+    color: #333;
+}
+.assess{
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px dotted #c9c9c9;
+    border-bottom: 1px dotted #c9c9c9;
+}
+.assess ul{
+    display: flex;
+}
+.assess ul li{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.assess ul li:first-child{
+    border-right: 1px solid #c9c9c9;
+}
+.assess ul li a{
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+}
+.assess span{
+    font-weight: 700;
+}
+.assess span:first-child{
+    color: #FF0036;
+}
+.assess span:last-child{
+    color: #280;
+}
+.number{
+    position: relative;
+    height: 36px;
+    margin-top: 20px;
+    line-height: 36px;
+    color: #999;
+    font-size: 12px;
+}
+.number .less,
+.number .big{
+    display: none;
+    position: absolute;
+    left: 200px;
+    color: #FF0036;
+}
+.number .numberactive{
+    display: inline-block;
+}
+.number span{
+    margin-right: 40px;
+}
+.number input{
+    width: 30px;
+    height: 26px;
+    padding-left: 6px;
+}
+.scape{
+    background: #999;
+    opacity: 0.4;
+}
+.number .up,
+.number .down{
+    position: absolute;
+    left: 120px;
+    height: 12px;
+    width: 16px;
+    line-height: 12px;
+    margin: 0;
+    text-align: center;
+    border: 1px solid #a7a6ab;
+    font-weight: bold;
+    font-size: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+.number .up{
+    top: 4px;
+}
+.number .down{
+    bottom: 0;
+}
+.number span:nth-child(5){
+    position: absolute;
+    left: 150px;
+}
+.shop{
+    margin-top: 20px;
+}
+.shop .shop-now,
+.shop .shop-car{
+    width: 178px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #FF0036;
+    cursor: pointer;
+}
+.shop .shop-now{
+    float: left;
+    background: #ffeded;
+    color: #FF0036;
+}
+.shop .shop-car{
+    float: left;
+    margin-left: 10px;
+    background: #FF0036;
+    color: #fff;
+}
+.shop .shop-car i{
+    margin-right: 3px;
+}
+.promise{
+    margin-top: 50px;
+    font-size: 12px;
+}
+.promise dt{
+    float: left;
+    color: #999;
+}
+.promise dl{
+    float: left;
+    width: 400px;
+}
+.promise dl ul li{
+    float: left;
+    margin-left: 30px;
+}
+.promise li a,
+.promise .pay-way{
+    color: #666;
+}
+.promise .pay-way{
+    float: right;
+    margin-right: 10px;
+}
+.declear{
+    width: 480px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+}

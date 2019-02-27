@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打地鼠小游戏</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    #bg{
+        position: relative;
+        width: 750px;
+        height: 550px;
+        background: url("./img/bg.png");
+        user-select: none;
+         cursor: none; 
+    }
+    #hammer1{
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        margin-left: -48px;
+        margin-top: -50px;
+        user-select: none;
+         cursor: none; 
+    }
+    div[id^="box"]{
+        position: absolute;
+        width: 102px;
+        height: 103px;
+        /* border: 1px solid black; */
+        overflow: hidden;
+    }
+    #box1{
+        top: 154px;
+        left: 140px;
+    }
+    #box2{
+        top: 154px;
+        left: 329px;
+    }
+    #box3{
+        top: 154px;
+        left: 527px;
+    }
+    #box4{
+        top: 246px;
+        left: 116px;
+    }
+    #box5{
+        top: 246px;
+        left: 333px;
+    }
+    #box6{
+        top: 246px;
+        left: 532px;
+    }
+    #box7{
+        top: 342px;
+        left: 109px;
+    }
+    #box8{
+        top: 347px;
+        left: 334px;
+    }
+    #box9{
+        top: 348px;
+        left: 551px;
+    }
+    div[id^="box"] img{
+        position: absolute;
+        left: 0;
+        top: 102px;
+    }
+    #time{
+        position: absolute;
+        top: 193px;
+        right: 148px;
+        width: 118px;
+        height: 23px;
+        /* border: 1px solid black; */
+        
+    }
+    #score{
+        position: absolute;
+        top: 193px;
+        left: 228px;
+        width: 118px;
+        height: 23px;
+        /* border: 1px solid black; */
+    }
+    #select{
+        position: absolute;
+        z-index: 101;
+        left: 20px;
+        top: 10px;
+    }
+    #easy,#commonly,#difficult{
+      position: absolute;
+      z-index: 101;
+      top: 35px;
+    }
+    #commonly{
+        left: 48px;
+    }
+    #difficult{
+        left: 96px;
+    }
+    .btn{
+        display: none;
+    }
+    #play{
+        position: absolute;
+        z-index: 101;
+        top: 15px;
+        right: 20px;
+    }
+    </style>
+</head> 
+<body>
+<div id="bg">
+    <button id="select">选择难易程度</button>
+    <button id="easy" class="btn">简单</button>
+    <button id="commonly" class="btn">一般</button>
+    <button id="difficult" class="btn">困难</button>
+    <button id="play">开始</button>
+    <div id="score"></div>
+    <div id="time"></div>
+    <img src="./img/hammer1.png" alt="" id="hammer1">
+    <div id="box1">
+      <img src="./img/mouse1.png" alt="">   
+    </div>
+    <div id="box2">
+        <img src="./img/mouse1.png" alt="">   
+      </div>
+    <div id="box3">
+        <img src="./img/mouse1.png" alt="">   
+    </div>
+    <div id="box4">
+        <img src="./img/mouse1.png" alt="">   
+    </div>
+    <div id="box5">
+        <img src="./img/mouse1.png" alt="">   
+    </div>
+    <div id="box6">
+        <img src="./img/mouse1.png" alt="">   
+      </div>
+      <div id="box7">
+        <img src="./img/mouse1.png" alt="">   
+      </div>
+      <div id="box8">
+        <img src="./img/mouse1.png" alt="">   
+      </div>
+      <div id="box9">
+        <img src="./img/mouse1.png" alt="">   
+      </div>
+</div>
+
+<script>
+//选择难易程度按钮 点击实现三个按钮的显示和消失
+var select = document.getElementById('select');
+var btn = document.getElementsByClassName('btn');
+var flag1 = true;
+var flag3 = false;
+select.onclick = function(){
+    if(flag1){
+        for(var i=0;i<btn.length;i++){
+        btn[i].style.display = "inline-block";
+       }
+       flag1 = !flag1;
+    }else if(flag1 == false){
+        for(var i=0;i<btn.length;i++){
+        btn[i].style.display = "none";
+       }
+       flag1 = !flag1;
+    }   
+    flag3 = true;
+}
+
+//倒计时
+var second = 0;
+var minute = 0;
+var Time = document.getElementById('time');
+var countdown;
+var str = "";
+var alltime = 60 * 1;  //以秒数来计时
+function CountDown(){
+second = Math.floor(alltime % 60);
+minute = Math.floor(alltime / 60);
+str = minute + "分" + second + "秒";
+    if(alltime == 10){
+        Time.style.color = "red";
+    }
+    if(alltime == 0){
+        clearInterval(countdown);
+        str = "game over";
+        Time.innerHTML = str;
+        clearInterval(avgtime);
+    }
+Time.innerHTML = str;
+--alltime;
+}
+
+//计算分数
+var score = document.getElementById('score');
+var bg = document.getElementById('bg');
+var hammer1 = document.getElementById('hammer1');
+
+bg.onmousedown = function(){
+    hammer1.src = "./img/hammer2.png";
+}
+bg.onmouseup = function(){
+    hammer1.src = "./img/hammer1.png";
+}
+bg.onmousemove = function(e){
+    x = e.clientX;
+    y = e.clientY;
+    hammer1.style.left = x + "px";
+    hammer1.style.top = y + "px";
+}
+
+var watime = 0;
+var watmaxtime = 1000;
+var nowTop = 102;
+var endTop = 0;
+var mtimer = null;
+//随机产生老鼠
+var boxArry = [];
+var mouseArry = [];
+var mouseId = 0;
+for(var i=0 ; i < 9 ; i++){
+    boxArry[i] = document.getElementById('box' + (i+1));
+    mouseArry[i] = boxArry[i].getElementsByTagName('img')[0];
+}
+
+//简单、一般、困难按钮选择
+var easy = document.getElementById('easy');
+var commonly = document.getElementById('commonly');
+var difficult = document.getElementById('difficult');
+var btnselect = 0;
+easy.onclick = function(){
+    btnselect = 1;
+}
+commonly.onclick = function(){
+    btnselect = 2;   
+}
+difficult.onclick = function(){
+    btnselect = 3;  
+}
+
+//平均2s产生一个老鼠
+var flag;
+var avgtime;
+function mouseUp(){
+    if(nowTop > endTop){
+        nowTop -= 10;            
+    }
+    if(nowTop < endTop){
+        nowTop = endTop;
+    }           
+    if(nowTop == endTop){
+        if(watime < watmaxtime){
+            watime += 100;
+        }
+        if(watime >= watmaxtime){
+            clearInterval(mtimer);
+            nowTop = 102;
+            mtimer = null;
+        }
+    }
+    mouseArry[mouseId].style.top = nowTop + "px";
+}
+
+//开始按钮
+var play = document.getElementById('play');
+var flag2 = true;
+var playflag = false;
+play.onclick = function(){
+    if(flag3 == false){
+        alert('请先选择难易程度，再开始游戏!');
+    }else if(flag3){
+    if(flag2){
+        playflag = !playflag;
+        play.innerHTML = "暂停";
+        if(btnselect == 1){
+                avgtime = setInterval(function(){
+                if(mtimer == null){
+                mouseId = parseInt(Math.random() * 9);
+                nowTop = 102;
+                watime = 0;
+                flag = true;
+                mouseArry[mouseId].src = "./img/mouse1.png";
+                mtimer = setInterval(mouseUp,100);         
+        }  
+    },2000);  
+        }else if(btnselect == 2){
+            avgtime = setInterval(function(){
+                if(mtimer == null){
+                mouseId = parseInt(Math.random() * 9);
+                nowTop = 102;
+                watime = 0;
+                flag = true;
+                mouseArry[mouseId].src = "./img/mouse1.png";
+                mtimer = setInterval(mouseUp,50);           
+        }       
+    },2000);          
+        }else if(btnselect == 3){
+            avgtime = setInterval(function(){
+                if(mtimer == null){
+                mouseId = parseInt(Math.random() * 9);
+                nowTop = 102;
+                watime = 0;
+                flag = true;
+                mouseArry[mouseId].src = "./img/mouse1.png";
+                mtimer = setInterval(mouseUp,30);           
+        }       
+    },2000);
+        }
+        countdown = setInterval(CountDown,1000);
+        flag2 = !flag2;
+    }else if(flag2 == false){
+        playflag = !playflag;
+        play.innerHTML = "开始";
+        clearInterval(countdown);
+        clearInterval(mtimer);
+        mtimer = null;
+        flag = false;
+        clearInterval(avgtime);
+        if(playflag == false){
+             for(var i=0;i<9;i++){
+            mouseArry[i] = boxArry[i].getElementsByTagName('img')[0];
+            mouseArry[i].style.top = 102 + "px";
+        }
+        }
+       
+        flag2 = !flag2;
+    }
+    }   
+}
+
+//碰撞检测  
+var sum = 0;
+score.innerHTML = sum;
+bg.onclick = function(e){  
+    var x = e.clientX;
+    var y = e.clientY;
+    var x1 = mouseArry[mouseId].offsetLeft + boxArry[mouseId].offsetLeft;
+    var x2 = x1 + boxArry[mouseId].offsetWidth;
+    var y1 = mouseArry[mouseId].offsetTop + boxArry[mouseId].offsetTop;
+    var y2 = boxArry[mouseId].offsetTop + boxArry[mouseId].offsetHeight;
+    if(x > x1 && x < x2 && y > y1 && y < y2){
+        mouseArry[mouseId].src = "./img/mouse2.png";
+        if(flag){
+            ++sum;
+        }
+        flag = false;
+
+    }   
+   
+    score.innerHTML = sum;
+}
+
+
+</script>
+</body>
+</html>

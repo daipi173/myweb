@@ -1,0 +1,540 @@
+/*小米网站导航栏信息*/
+body{
+    margin: 0;
+    padding: 0;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    min-width: 1226px;
+}
+a{
+    text-decoration: none;
+}
+.nav{
+    height: 40px;
+    /* border: 1px solid black; */
+    background-color: #333;
+}
+.nav a{
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.nav a:hover{
+    color: #fff;
+}
+.container{
+    width: 1226px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+.container::before,.container::after
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: table;
+}
+.container::after,.clearfix::after{
+    content: '';
+    clear: both;
+}
+.left{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0;
+}
+.left span{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #424242;
+    margin: 0.5em;
+}
+.right,.car{
+    float: right;
+}
+.car{
+    position: relative;
+}
+.car a{
+    display: block;
+    height: 40px;
+    width: 120px;
+    line-height: 40px;
+    background-color: #424242;
+    text-align: center;
+}
+.car a i{
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 4px;
+    vertical-align: -4px;
+}
+.car span{
+    margin-left: -4px;
+    font-size: 12px;
+}
+.car a:hover{
+    background-color: #fff;
+    color: #ff6700;
+}
+.car-hidden{
+    position: absolute;
+    right: 0;
+    height: 83px;
+    line-height: 55px;
+    width: 316px;
+    z-index: 1;
+    color: #424242;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    display: none;
+}
+.right{
+    margin-right: 15px;
+}
+.right a{
+    float: left;
+    padding: 0 5px;
+    line-height: 40px;
+    height: 40px;
+}
+.right span{
+    float: left;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #424242;
+    line-height: 40px;
+    height: 40px;
+}
+.right .info{
+    padding: 0 10px;
+}
+/*小米商城头部*/
+.header{
+    height: 100px;
+}
+.header-log{
+    float: left;
+    width: 62px;
+    height: 55px;
+    margin-top: 22px;
+    /* border: 1px solid black; */
+}
+.header-log a{
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: url(../img/logo.png);
+}
+.header-log a.icon-hideen{
+    text-align: left;
+    text-indent: -9999px;
+}
+.header-nav{
+    float: left;
+    width: 820px;
+    height: 100px;
+    /* border: 1px solid black; */
+}
+.header-nav .nav-ul,.nav-type{
+    margin: 0;
+    padding: 0;
+}
+.header-nav .nav-ul{
+    width: 820px;
+    height: 100px;
+    font-size: 16px;
+    padding: 12px 0 0 30px;
+}
+.header-nav .nav-ul .nav-type{
+    float: left;
+    list-style-type: none;
+    width: 127px;
+    padding: 0 15px 0 0;
+}
+.header-nav .nav-ul .nav-type a{
+    display: block;
+    padding: 26px 0 38px;
+    text-align: right;
+    color: #333;
+}
+.header-nav .nav-ul .nav-title{
+    list-style-type: none;
+    float: left;
+}
+.header-nav .nav-ul .nav-title a{
+    display: block;
+    padding: 26px 10px 38px;
+    color: #333;
+}
+.header-nav .nav-ul .nav-title a:hover{
+    color: #ff6700;
+}
+.header-search{
+    float: right;
+    width: 296px;
+    height: 50px;
+    margin-top: 25px;
+    /* border: 1px solid black; */
+}
+/*小米商城搜索框*/
+.header-search .search-form{
+    position: relative;
+    display: block;
+    width: 296px;
+    height: 50px;
+}
+.header-search .search-form .search-text{
+    position: absolute;
+    top: 0;
+    right: 51px;
+    display: block;
+    width: 245px;
+    height: 50px;
+    line-height: 50px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    outline: 0;
+}
+.header-search .search-form .search-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 52px;
+    height: 54px;
+    border: 1px solid #e0e0e0;
+    line-height: 24px;
+    font-size: 24px;
+    background: #fff;
+    color: #616161;
+    outline: 0;
+}
+.header-search .search-form .search-btn:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+.header-search .search-form .small-title{
+    position: absolute;
+    top:16px;
+    right: 60px;
+}
+.header-search .search-form .small-title a{
+    font-size: 12px; 
+    padding: 0 4px;
+    color: #757575; 
+    background: #eee;
+    display: inline-block;
+}
+.header-search .search-form .small-title a:hover{
+    color: #fff;
+    background-color: #ff6700;
+}
+/*小米闪购*/
+.xiaomi-shop{
+    background-color: #f5f5f5;
+}
+.xiaomi-shophead{
+    height: 170px;
+    background: url(../img/seckill-head.jpg) no-repeat 50% 0;
+    margin-top: 19px;
+}
+.xiaomi-shopnav{
+    margin: -68px 0 22px;
+}
+.xiaomi-shopnavfixed{
+    position: fixed;
+    top: 60px;
+    width: 1226px;
+}
+.xiaomi-shopnav ul{
+    height: 68px;
+    background: #414141;
+    padding-left: 0;
+}
+.xiaomi-shopnav li{
+    display: block;
+    float: left;
+    color: #fff;
+    width: 20%;
+    height: 68px;
+    line-height: 68px;
+    text-align: center;
+    cursor: pointer;
+}
+.xiaomi-shopnav .active{
+    background-color: #f1393a;
+}
+.xiaomi-shopnav li em{
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1;
+    vertical-align: middle;
+} 
+.xiaomi-shopnav li span{
+    display: inline-block;
+    margin-left: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.xiaomi-shopnav li span em{
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 0;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+}
+.xiaomi-img .clearfix{
+    list-style-type: none;
+    padding-left: 0;
+    margin-right: -13px;
+    display: none;
+    /* border: 1px solid black; */
+}
+.xiaomi-img .xiaomi-active{
+    display: block;
+}
+.xiaomi-img .clearfix::after{
+    content: '';
+    display: block;
+}
+.xiaomi-img ul li{
+    float: left;
+    height: 190px;
+    width: 400px;
+    background-color: #fff;
+    /* border: 1px solid black; */
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+.xiaomi-img .img-bg{
+    float: left;
+    width: 190px;
+    height: 190px;
+    /* border: 1px solid red; */
+}
+.xiaomi-img .img-bg img{
+    height: 190px;
+}
+.xiaomi-img .img-info{
+    width: 190px;
+    height: 190px;
+    /* border: 1px solid black; */
+    margin-left: 210px;
+    padding-top: 30px;
+}
+.xiaomi-img .img-info .img-name{
+    font-size: 16px;
+    color: #333;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.xiaomi-img .img-info .img-tips{
+    font-size: 12px;
+    line-height: 12px;
+    color: #b0b0b0;
+    margin-top: 10px;
+}
+.xiaomi-img .img-info .img-price{
+    font-size: 16px;
+    line-height: 16px;
+    color: #f1393a;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+.xiaomi-img .img-info .img-price del{
+    font-size: 12px;
+    line-height: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+.xiaomi-img .img-info .img-btn{
+    display: inline-block;
+    width: 118px;
+    height: 28px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 28px;
+    text-align: center;
+    background-color: #f1393a;
+    margin-top: 19px;
+    border: 1px solid #f1393a;
+}
+.xiaomi-img .img-info .img-noice{
+    font-size: 12px;
+    line-height: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+.notice{
+    font-size: 12px;
+    color: #999;
+    margin-top: 100px;
+    padding-bottom: 35px;
+}
+/*底部图标*/
+.bottom-icon .container ul{
+    width: 100%;
+    margin: 0 auto;
+    height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 0;
+}
+.bottom-icon .container ul li{
+    list-style-type: none;
+    float: left;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+.bottom-icon .container ul li i{
+    font-size: 24px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.bottom-icon .container ul li a{
+    font-size: 16px;
+    line-height: 25px;
+    color: #616161;
+    margin: 0 54px;
+}
+.bottom-icon .container ul li a:hover{
+    color: #ff6700;
+}
+.bottom-icon .container ul li .serve{
+    margin-left: 58px;
+}
+.bottom-icon .container ul li{
+    font-size: 0;
+}
+.bottom-icon .container ul li span{
+    font-size: 16px;
+}
+/*底部帮助中心*/
+.container dl{
+    float: left;
+    height: 112px;
+    width: 160px;
+    margin: 0;
+}
+.container dd{
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.container .first{
+    margin-top: 20px;
+}
+.container dt{
+    margin-bottom: -1px;
+}
+.bottom-serve{
+    margin: 40px 0;
+}
+.container .telephone{
+    float: right;
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+}
+.container .telephone p{
+    margin: 0;
+    text-align: center;
+    color: #616161;
+}
+.container .telephone .num{
+    font-size: 22px; 
+    margin-bottom: 5px;
+    height: 22px;
+    line-height: 22px;
+    color: #ff6700;
+}
+.container .telephone .weekend{
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+.container .telephone a:hover{
+    color: #fff;
+    background: #ff6700;
+}
+.container .telephone a{
+    display: block;
+    height: 28px;
+    width: 118px;
+    line-height: 28px;
+    border: 1px solid #ff6700;
+    margin: 0 auto;
+    text-align: center;
+}
+.container .telephone a i{
+    font-size: 12px;
+    padding-right: 4px;
+}
+/*小米商城底部*/
+.info-bottom{
+    height: 122px;
+    width: 100%;
+    padding: 30px 0;
+    background: #fafafa;
+}
+.info-bottom .container .logo-xiaomi{
+    float: left;
+    height: 57px;
+    width: 57px;
+    background: url(../img/logo-footer.png) no-repeat;
+    margin-right: 10px;
+}
+.info-bottom .container .nav-bottom{
+    height: 73px;
+}
+.info-bottom .container .nav-bottom ul{
+    margin: 0;
+}
+.info-bottom .container .nav-bottom li{
+    float: left;
+    list-style-type: none;
+    font-size: 0;  
+}
+.info-bottom .container .nav-bottom a{
+    font-size: 12px;
+}
+.info-bottom .container .nav-bottom span{
+    color: #b0b0b0;
+    font-size: 12px;
+    margin: 0 3px;
+}
+.info-bottom .container .nav-bottom p{
+    display: inline-block;
+    margin: 0;
+}
+.info-bottom .container .box-bottom{
+    height: 54px;
+}
+.info-bottom .container p,p a{
+    line-height: 18px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.info-bottom .container .box-bottom .p-bottom{
+    margin-left: 67px;
+}
+.info-bottom .container a img{
+    float: right;
+    width: 85px;
+    height: 28px;
+}
+.info-bottom .container .img-bottom{
+    margin-left: 47px;
+}
+.info-bottom .container .title-bottom{
+    clear: both;
+    background: url(../img/slogan2016.png) no-repeat;
+    margin: 48px auto 0;
+    width: 267px;
+    height: 19px;
+}
