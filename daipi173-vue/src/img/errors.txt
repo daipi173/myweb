@@ -1,0 +1,3 @@
+[2019-03-25 15:29:04] layer "立即兑换.j": Unsupported extension: j
+[2019-03-25 15:26:23] layer "矢量智能对象.jpg": Duplicate path: 矢量智能对象.jpg
+[2019-03-25 15:33:24] layer "矢量智能对象.jpg": Duplicate path: 矢量智能对象.jpg
