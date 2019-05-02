@@ -15,5 +15,5 @@ $news = array(
 );
 
 echo json_encode($news);
-header("Access-Control-Allow-Origin: *");
+
 
