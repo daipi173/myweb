@@ -1,0 +1,6 @@
+<view>
+<slot name="text"></slot>
+<slot name="text1"></slot>
+<view bindtap='clickMe'>{{age}}</view>
+<view>xixixi</view>
+</view>

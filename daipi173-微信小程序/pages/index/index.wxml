@@ -1,0 +1,12 @@
+<!--pages/index/index.wxml-->
+<vant-btn
+id='vant_button'
+bindtap='clickMe'></vant-btn>
+
+<vant-button 
+class='notice'
+type='info'
+bindtap='clickMe'
+>btn22</vant-button>
+
+

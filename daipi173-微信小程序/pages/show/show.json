@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "app-content": "/Components/content/content",
+    "vant-notify": "/Components/notify/index"
+  }
+}

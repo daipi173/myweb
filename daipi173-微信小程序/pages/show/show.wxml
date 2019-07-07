@@ -1,0 +1,13 @@
+<app-content 
+content="我是content"
+bindmyevent="aaa">
+<text slot="text1">我是text</text>
+<view>123</view>
+<text slot="text">我是text1</text>
+</app-content>
+
+<app-content 
+content="我是secound content"
+bindmyevent="bbb"></app-content>
+<vant-notify color="green"></vant-notify>
+<button bindtap='click_me'>btn</button>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vant-button": "/dist/button/index",
+    "vant-btn": "/Components/notify/index"
+  }
+}

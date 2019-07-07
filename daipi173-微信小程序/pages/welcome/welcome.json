@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "app-header": "/Components/header/header"
+  }
+}

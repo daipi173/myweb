@@ -1,0 +1,2 @@
+<!--Components/notify/index.wxml-->
+<vant-button type='info'>btn11</vant-button>

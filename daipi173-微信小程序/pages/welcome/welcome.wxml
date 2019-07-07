@@ -1,0 +1,4 @@
+<app-header 
+title="welcome" 
+age="22"
+bindmyEvent="bindmyEvent"></app-header>

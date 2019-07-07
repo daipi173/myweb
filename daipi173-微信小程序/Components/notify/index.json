@@ -1,0 +1,6 @@
+{
+  "component": true,
+    "usingComponents": {
+      "vant-button": "/dist/button/index"
+    }
+}
