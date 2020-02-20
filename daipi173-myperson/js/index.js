@@ -56,3 +56,9 @@ for(var i = 0 ; i < len1 ; i++){
         }
     }
 }
+// More
+let caseBtn = document.querySelector('.case-btn')
+let showMore = document.getElementById('show-more')
+caseBtn.onclick = function() {
+    showMore.style.display = 'flex'
+}
